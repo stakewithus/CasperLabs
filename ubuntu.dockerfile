@@ -6,8 +6,8 @@ RUN echo "deb https://dl.bintray.com/casperlabs/debian /" | tee -a /etc/apt/sour
 RUN curl -o casperlabs-public.key.asc https://bintray.com/user/downloadSubjectPublicKey?username=casperlabs
 RUN apt-key add casperlabs-public.key.asc
 RUN apt-get update -y
-RUN apt-get install casperlabs-node -y
-RUN apt-get install casperlabs -y
+RUN apt-get install casperlabs-node=0.6.0 -y
+RUN apt-get install casperlabs=0.6.0 -y
 
 RUN mkdir -p /opt/casper-deps
 WORKDIR /opt/casper-deps
